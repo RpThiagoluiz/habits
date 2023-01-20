@@ -1,7 +1,7 @@
-import { Container, Loading } from './styles';
+import { ActivityIndicator, View } from 'react-native';
 
 export const LoadingFonts = () => (
-  <Container>
-    <Loading />
-  </Container>
+  <View>
+    <ActivityIndicator size={60} />
+  </View>
 );
