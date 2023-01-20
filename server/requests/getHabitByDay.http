@@ -1,0 +1,5 @@
+# Choose route for confirm response
+# GET  http://localhost:3333/day?date=2023-01-16T03%3A00%3A00.000z
+
+
+GET  http://localhost:3333/day?date=2023-01-02T03%3A00%3A00.000z
