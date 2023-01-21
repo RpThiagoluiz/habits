@@ -2,6 +2,6 @@ POST  http://localhost:3333/habits
 Content-Type: application/json
 
 {
- "title": "plantar bananeira em pé",
-"weekDays": [0,1,5]
+ "title": "Limpar a casa",
+"weekDays": [6]
 }
