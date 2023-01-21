@@ -1,36 +1,35 @@
+import './src/lib/dayjs';
+
 import { StatusBar } from 'react-native';
-import {
+import { 
   useFonts,
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
-  Inter_800ExtraBold,
+  Inter_800ExtraBold
 } from '@expo-google-fonts/inter';
-import { LoadingFonts } from '@components/LoadingFonts';
-import { Home } from '@screens/Home';
+
+import { Loading } from './src/components/Loading';
+import { Home } from './src/screens/Home';
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_600SemiBold,
     Inter_700Bold,
-    Inter_800ExtraBold,
+    Inter_800ExtraBold
   });
+
+  if (!fontsLoaded) {
+    return (
+      <Loading />
+    );
+  }
 
   return (
     <>
-      {!fontsLoaded ? (
-        <LoadingFonts />
-      ) : (
-        <>
-          <StatusBar
-            barStyle="light-content"
-            backgroundColor="transparent"
-            translucent
-          />
-          <Home />
-        </>
-      )}
+      <Home />
+      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
     </>
   );
 }
